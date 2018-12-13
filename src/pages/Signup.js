@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import auth from '../lib/auth-service';
+import { withAuth } from '../providers/AuthProvider';
 
 class Signup extends Component {
 
@@ -51,4 +52,4 @@ class Signup extends Component {
   }
 }
 
-export default Signup;
+export default withAuth(Signup);

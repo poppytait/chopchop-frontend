@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import auth from '../lib/auth-service';
-
+import { withAuth } from '../providers/AuthProvider';
 class Login extends Component {
   state = {
     username: "",
@@ -13,7 +13,7 @@ class Login extends Component {
 
     auth.login({ username, password })
     .then( (user) => {
-      this.props.setUser(user)
+      this.props.setUser(user);
     })
     .catch( error => console.log(error) )
   }
@@ -37,4 +37,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default withAuth(Login);
