@@ -13,7 +13,9 @@ import Login from './pages/Login';
 import SearchRecipe from './pages/SearchRecipe';
 import Home from './pages/Home';
 import DisplayRecipeDetail from './pages/DisplayRecipeDetail'
-import Profile from './pages/Profile'
+import SavedRecipes from './pages/SavedRecipes'
+import chopchoplogo from './chopchoplogo.png'
+
 
 import AuthProvider from './providers/AuthProvider';
 
@@ -24,6 +26,7 @@ class App extends Component {
       <AuthProvider>
         <div className="container">
           <h1>Chop Chop</h1>
+          <img src={chopchoplogo} alt='logo' />
 
           <Navbar />
 
@@ -34,7 +37,7 @@ class App extends Component {
             <PrivateRoute path="/private" component={Private} />
             <PrivateRoute path="/searchrecipe" component={SearchRecipe} />
             <PrivateRoute path="/displayrecipedetail" component={DisplayRecipeDetail} />
-            <PrivateRoute path="/profile" component={Profile} />
+            <PrivateRoute path="/savedrecipes" component={SavedRecipes} />
           </Switch>
         </div>
       </AuthProvider>
