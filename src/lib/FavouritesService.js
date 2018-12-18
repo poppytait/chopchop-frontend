@@ -13,7 +13,10 @@ class FavouritesService {
     }
 
     getRecipes() {
-        return this.apiInstance.get('/favourites');
+        return this.apiInstance.get('/favourites')
+            .then((recipe) => {
+                return recipe;
+            })
     }
 
 }

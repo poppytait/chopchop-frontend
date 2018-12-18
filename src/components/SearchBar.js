@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import EdamamService from '../lib/EdamamService';
 import RecipeList from '../components/RecipeList'
-// import { Button } from "react-bulma-components/full";
 import '../style.css'
-
 
 class SearchBar extends Component {
   constructor(props) {
@@ -12,7 +10,6 @@ class SearchBar extends Component {
       value: '',
       recipes: []
     };
-
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,16 +22,11 @@ class SearchBar extends Component {
   handleSubmit(event) {
     event.preventDefault();
 
-    alert('An ingredient was submitted: ' + this.state.value);
-
     EdamamService.searchRecipes(this.state.value)
       .then((recipes) => this.setState({ recipes }))
-
-
   }
 
   render() {
-    console.log(this.state.recipes)
     return (
       <div>
         <form onSubmit={this.handleSubmit} className="searchbar">
@@ -46,7 +38,6 @@ class SearchBar extends Component {
         </form>
         <RecipeList recipesList={this.state.recipes} />
       </div>
-
     );
   }
 }

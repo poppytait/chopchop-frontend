@@ -7,7 +7,7 @@ class Private extends Component {
     return (
       <div>
         <h1>Welcome {this.props.user.username}</h1>
-        <Link to='/SavedFavourites' className='button btnBlueGreen'>Your Favourites</Link>
+        <Link to='/SavedRecipes' className='button btnBlueGreen'>Your Favourites</Link>
         <Link to='/SearchRecipe' className='button btnBlueGreen'>Search ingredients</Link>
       </div>
     )

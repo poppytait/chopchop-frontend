@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import RecipeListItem from '../components/RecipeListItem'
 // import DisplayRecipeDetail from '../components/DisplayRecipeDetail'
 // import EdamamService from '../lib/EdamamService'
@@ -24,8 +23,8 @@ class RecipeList extends Component {
     render() {
 
         const recipes = this.props.recipesList.map((item, i) => {
-            return <li key={i}>  
-                <RecipeListItem item={item}/>
+            return <li key={i}>
+                <RecipeListItem item={item} />
             </li>
         })
 
