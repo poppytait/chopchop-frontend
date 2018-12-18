@@ -6,7 +6,6 @@ import Navbar from './components/Navbar';
 import PrivateRoute from './components/PrivateRoute';
 import AnonRoute from './components/AnonRoute';
 
-
 import Private from './pages/Private';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
@@ -14,8 +13,8 @@ import SearchRecipe from './pages/SearchRecipe';
 import Home from './pages/Home';
 import DisplayRecipeDetail from './pages/DisplayRecipeDetail'
 import SavedRecipes from './pages/SavedRecipes'
-import chopchoplogo from './chopchoplogo.png'
 
+import chopchoplogo from './chopchoplogo.png'
 
 import AuthProvider from './providers/AuthProvider';
 
@@ -38,6 +37,8 @@ class App extends Component {
             <PrivateRoute path="/searchrecipe" component={SearchRecipe} />
             <PrivateRoute path="/displayrecipedetail" component={DisplayRecipeDetail} />
             <PrivateRoute path="/savedrecipes" component={SavedRecipes} />
+
+
           </Switch>
         </div>
       </AuthProvider>

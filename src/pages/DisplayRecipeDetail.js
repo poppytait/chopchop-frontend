@@ -4,21 +4,19 @@ import FavouritesService from '../lib/FavouritesService';
 class DisplayRecipeDetail extends Component {
 
     state = {
-        item: {
-            recipe: {
-                label: '',
-                healthLabels: [],
-                ingredientLines: [],
-                totalNutrients: {
-                    ENERC_KCAL: {
-                        quantity: '',
-                        unit: ''
-                    },
-                    PROCNT: {
-                        label: '',
-                        quantity: '',
-                        unit: ''
-                    }
+        recipe: {
+            label: '',
+            healthLabels: [],
+            ingredientLines: [],
+            totalNutrients: {
+                ENERC_KCAL: {
+                    quantity: '',
+                    unit: ''
+                },
+                PROCNT: {
+                    label: '',
+                    quantity: '',
+                    unit: ''
                 }
             }
         },
@@ -28,20 +26,20 @@ class DisplayRecipeDetail extends Component {
     componentDidMount() {
         // const item = this.props.location.state.item
         this.setState(this.props.location.state);
-        const { item } = this.props.location.state
-        console.log(item)
+        const { recipe } = this.props.location.state
+        //const  recipe  = this.props.location.state.recipe
+        console.log(recipe)
     }
 
     handleSubmit = event => {
         event.preventDefault();
-        FavouritesService.saveRecipe(this.state.item.recipe)
+        FavouritesService.saveRecipe(this.state.recipe)
             .then((alert('added to favourites')));
         this.setState({ title: "Saved to favourites" })
-
     }
 
     render() {
-        const recipe = this.state.item.recipe
+        const recipe = this.state.recipe
 
         const ingredients = recipe.ingredientLines.map((item, i) => {
             return <li key={i}>

@@ -8,12 +8,12 @@ class RecipeListItem extends Component {
 
         return (
             <div>
-            <Link to ={{
-                pathname: '/displayrecipedetail',
-                state: {
-                    item: this.props.item,
-                }
-            }}> {this.props.item.recipe.label}</Link>
+                <Link to={{
+                    pathname: '/displayrecipedetail',
+                    state: {
+                        recipe: this.props.item.recipe,
+                    }
+                }}> {this.props.item.recipe.label}</Link>
 
             </div>
         );
