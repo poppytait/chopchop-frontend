@@ -5,6 +5,7 @@ import { Route, Switch } from 'react-router-dom'
 import Navbar from './components/Navbar';
 import PrivateRoute from './components/PrivateRoute';
 import AnonRoute from './components/AnonRoute';
+import FooterNavBar from './components/FooterNavBar';
 
 import Private from './pages/Private';
 import Signup from './pages/Signup';
@@ -23,23 +24,25 @@ class App extends Component {
   render() {
     return (
       <AuthProvider>
-        <div className="container">
-          <h1>Chop Chop</h1>
-          <img src={chopchoplogo} alt='logo' />
+        <div>
+          <div className="container">
+            <h1>Chop Chop</h1>
+            <img src={chopchoplogo} alt='logo' />
 
-          <Navbar />
+            <Navbar />
 
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <AnonRoute path="/signup" component={Signup} />
-            <AnonRoute path="/login" component={Login} />
-            <PrivateRoute path="/private" component={Private} />
-            <PrivateRoute path="/searchrecipe" component={SearchRecipe} />
-            <PrivateRoute path="/displayrecipedetail" component={DisplayRecipeDetail} />
-            <PrivateRoute path="/savedrecipes" component={SavedRecipes} />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <AnonRoute path="/signup" component={Signup} />
+              <AnonRoute path="/login" component={Login} />
+              <PrivateRoute path="/private" component={Private} />
+              <PrivateRoute path="/searchrecipe" component={SearchRecipe} />
+              <PrivateRoute path="/displayrecipedetail" component={DisplayRecipeDetail} />
+              <PrivateRoute path="/savedrecipes" component={SavedRecipes} />
+            </Switch>
 
-
-          </Switch>
+          </div>
+          <FooterNavBar />
         </div>
       </AuthProvider>
     )

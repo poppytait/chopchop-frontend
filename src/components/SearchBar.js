@@ -28,13 +28,15 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit} className="searchbar">
+      <div className="searchbar">
+        <form onSubmit={this.handleSubmit}>
           <label>
-            Ingredient:
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
+            <input type="text" placeholder="Search ingredients" className="input" value={this.state.value} onChange={this.handleChange} />
+            <button type="submit" className="search-button"><i class="fa fa-search"></i></button>
           </label>
-          <button><input type="submit" value="Submit" /></button>
+
+          {/* <button><input type="submit" /><i class="fas fa-search"></i></button> */}
+
         </form>
         <RecipeList recipesList={this.state.recipes} />
       </div>
