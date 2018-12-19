@@ -27,8 +27,8 @@ class FooterNavBar extends Component {
 
     renderIsNotLoggedIn = () => {
         return <div>
-            <Link to='/login'>Login</Link>
-            <Link to='/signup'>Signup</Link>
+            {/* <Link to='/login'>Login</Link>
+            <Link to='/signup'>Signup</Link> */}
         </div>
     }
 

@@ -15,14 +15,14 @@ class RecipeCard extends Component {
                 <div className="recipe-card">
                     <img src={this.props.image} alt='recipe' />
                     <p>{this.props.label}</p>
-                    <p>{this.props.calories}</p>
+                    <p>Calories: {(Math.floor(this.props.calories) / this.props.yield)}</p>
 
 
-                    <button className="button" onClick={(event) => {
+                    <button className="remove-button" onClick={(event) => {
                         event.preventDefault();
                         this.props.deleteRecipe(this.props.id)
                     }
-                    }>Remove from Favourites</button>
+                    }>X</button>
 
 
                 </div>

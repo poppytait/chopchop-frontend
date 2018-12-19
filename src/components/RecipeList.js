@@ -2,40 +2,39 @@ import React, { Component } from 'react';
 import RecipeListItem from '../components/RecipeListItem'
 // import DisplayRecipeDetail from '../components/DisplayRecipeDetail'
 // import EdamamService from '../lib/EdamamService'
+import RecipeCard from '../components/RecipeCard'
 
 class RecipeList extends Component {
 
-    state = {
-        recipes: [],
-        error: false,
-        isLoading: true,
-        hideRecipeDetail: true,
-    }
+  state = {
+    recipes: [],
+    error: false,
+    isLoading: true,
+    hideRecipeDetail: true,
+  }
 
-    componentDidMount() {
-        console.log(this.context);
-    }
+  componentDidMount() {
+    console.log(this.context);
+  }
 
-    componentWillUnmount() {
-        console.log("i'm dying!!!")
-    }
+  render() {
 
-    render() {
+    const recipes = this.props.recipesList.map((item, i) => {
+      return <li key={i}>
+        <RecipeListItem item={item} />
+      </li>
+    })
 
-        const recipes = this.props.recipesList.map((item, i) => {
-            return <li key={i}>
-                <RecipeListItem item={item} />
-            </li>
-        })
 
-        return (
-            <div>
-                <ul>
-                    {recipes}
-                </ul>
-            </div>
-        );
-    }
+
+    return (
+      <div>
+        <ul>
+          {recipes}
+        </ul>
+      </div>
+    );
+  }
 }
 
 export default RecipeList;

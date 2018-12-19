@@ -7,13 +7,15 @@ class RecipeListItem extends Component {
 
 
         return (
-            <div>
+            <div className="recipe-card">
                 <Link to={{
                     pathname: '/displayrecipedetail',
                     state: {
                         recipe: this.props.item.recipe,
                     }
-                }}> {this.props.item.recipe.label}</Link>
+                }}>
+                    <img src={this.props.item.recipe.image} />
+                    {this.props.item.recipe.label}</Link>
 
             </div>
         );

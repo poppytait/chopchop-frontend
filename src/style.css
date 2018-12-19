@@ -6,7 +6,9 @@ font-family: 'Muli', sans-serif; */
 
 html {
     box-sizing: border-box;
+    height: 100%;
   }
+
   *, *:before, *:after {
     box-sizing: inherit;
   }
@@ -14,6 +16,9 @@ html {
   body {
     margin: 0;
     padding: 0;
+    background: linear-gradient(#9cdaeca2, #b4f7c8);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
   
@@ -30,12 +35,19 @@ html {
     font-family: 'Playfair Display', serif;
   }
   
-  h2 {}
+  h2 {
+    font-family: 'Playfair Display', serif;
+  }
   
   h3 {}
   
   p {
     margin: 0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
   }
   
   
@@ -84,7 +96,7 @@ html {
     display: block;
     position: relative;
     float: left;
-    width: 150px;
+    width: 100px;
     padding: 0;
     margin: 10px 20px 10px 0;
     font-weight: 400;
@@ -93,6 +105,8 @@ html {
     color: #fff;
     border-radius: 30px;
     transition: all 0.2s ;
+    background: #3CDBD3;
+    font-size: 15px;
   }
 
   .button:hover {
@@ -203,4 +217,80 @@ footer {
 .fas {
   font-size: 30px;
   margin-top: 5px;
+}
+
+/* --- Home --- */
+/* .centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50%;
+  margin-left: -20%;
+}
+
+.home {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50%;
+  margin-left: -20%;
+} */
+
+.h1-and-logo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -63%;
+  margin-left: -20%;
+}
+
+h1 {
+  margin-left: -12px;
+}
+
+.login-buttons {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -5%;
+  margin-left: -29%;
+}
+
+.login {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: 20%;
+  margin-left: -25%;
+}
+
+.signup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: 20%;
+  margin-left: -25%;
+}
+
+.p-signup {
+  font-size: 12px;
+}
+
+.remove-button {
+  text-decoration: none;
+  display: block;
+  position: absolute;
+  float: left;
+  width: 28px;
+  padding: 0;
+  margin: -8px 20px 10px 0;
+  font-weight: 400;
+  text-align: center;
+  line-height: 20px;
+  color: #fff;
+  border-radius: 30px;
+  transition: all 0.2s ;
+  background: #3CDBD3;
+  font-size: 10px;
+  right: 20px;
 }

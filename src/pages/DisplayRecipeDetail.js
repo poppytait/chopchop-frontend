@@ -52,7 +52,7 @@ class DisplayRecipeDetail extends Component {
                 <h1>Recipe Detail</h1>
                 <p>{recipe.label}</p>
                 <p>{ingredients}</p>
-                <p>{recipe.totalNutrients.PROCNT.quantity}</p>
+                <p>Protein: {Math.floor(recipe.totalNutrients.PROCNT.quantity)}g</p>
 
                 <button onClick={this.handleSubmit} className="button is-success" type="submit">
                     {this.state.title}</button>
