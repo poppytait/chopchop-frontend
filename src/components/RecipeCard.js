@@ -3,12 +3,6 @@ import React, { Component } from 'react';
 
 class RecipeCard extends Component {
 
-    componentDidMount() {
-        console.log(this.props)
-
-    }
-
-
     render() {
         return (
             <div>

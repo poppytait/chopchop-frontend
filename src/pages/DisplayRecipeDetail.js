@@ -24,11 +24,7 @@ class DisplayRecipeDetail extends Component {
     }
 
     componentDidMount() {
-        // const item = this.props.location.state.item
         this.setState(this.props.location.state);
-        const { recipe } = this.props.location.state
-        //const  recipe  = this.props.location.state.recipe
-        console.log(recipe)
     }
 
     handleSubmit = event => {

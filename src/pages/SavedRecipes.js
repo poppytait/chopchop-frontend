@@ -18,7 +18,6 @@ class SavedRecipes extends Component {
   componentDidMount() {
     FavouritesService.getRecipes()
       .then((recipe) => {
-        console.log(recipe)
         this.setState({
           favourites: recipe.data.favourites,
         });
@@ -30,7 +29,6 @@ class SavedRecipes extends Component {
   deleteRecipe(recipeID) {
     FavouritesService.deleteRecipe(recipeID)
       .then((response) => {
-        console.log(response)
         const favouriteIDs = response.data.favourites
         this.setState({
           favourites: this.state.favourites.filter((favourite) => {
@@ -41,15 +39,11 @@ class SavedRecipes extends Component {
       .catch(error => console.log(error))
   }
 
-
   render() {
     const { favourites } = this.state
 
     return (
       <div>
-
-
-
         {favourites.map((favourite) => {
           return <Link to={{
             pathname: '/displayrecipedetail',
@@ -65,6 +59,7 @@ class SavedRecipes extends Component {
               image={favourite.image}
               calories={favourite.calories}
               label={favourite.label}
+              yield={favourite.yield}
               deleteRecipe={this.deleteRecipe} />
           </Link>
         })}

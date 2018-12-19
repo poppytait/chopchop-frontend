@@ -13,10 +13,6 @@ class RecipeList extends Component {
     hideRecipeDetail: true,
   }
 
-  componentDidMount() {
-    console.log(this.context);
-  }
-
   render() {
 
     const recipes = this.props.recipesList.map((item, i) => {
