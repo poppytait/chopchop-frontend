@@ -32,11 +32,8 @@ class SearchBar extends Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             <input type="text" placeholder="Search ingredients" className="input" value={this.state.value} onChange={this.handleChange} />
-            <button type="submit" className="search-button"><i class="fa fa-search"></i></button>
+            <button type="submit" className="search-button"><i className="fa fa-search"></i></button>
           </label>
-
-          {/* <button><input type="submit" /><i class="fas fa-search"></i></button> */}
-
         </form>
         <RecipeList recipesList={this.state.recipes} />
       </div>

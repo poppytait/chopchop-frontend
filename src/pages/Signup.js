@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import auth from '../lib/AuthService';
 import { withAuth } from '../providers/AuthProvider';
 

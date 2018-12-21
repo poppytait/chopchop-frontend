@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Navbar from '../components/Navbar'
 import chopchoplogo from '../chopchoplogo.png'
 import { withAuth } from '../providers/AuthProvider';
-import { Link } from 'react-router-dom'
 
 class LandingPage extends Component {
 

@@ -4,7 +4,7 @@ import chopchoplogo from '../chopchoplogo.png'
 class Home extends Component {
   render() {
     return (
-      <div>
+      <div className="home-container">
         <div className="container">
           <div className="h1-and-logo">
             <img src={chopchoplogo} alt='logo' className="centered" />

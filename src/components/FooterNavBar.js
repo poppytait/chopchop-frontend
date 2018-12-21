@@ -15,11 +15,11 @@ class FooterNavBar extends Component {
                     </div></Link>
                 <Link to='/searchrecipe'>
                     <div className="footer-img">
-                        <i class="fas fa-search"></i>
+                        <i className="fas fa-search"></i>
                     </div></Link>
                 <Link to='/savedrecipes'>
                     <div className="footer-img">
-                        <i class="fas fa-heart"></i>
+                        <i className="fas fa-heart"></i>
                     </div></Link>
             </footer>
         </div>

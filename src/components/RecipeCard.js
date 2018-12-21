@@ -8,8 +8,8 @@ class RecipeCard extends Component {
             <div>
                 <div className="recipe-card">
                     <img src={this.props.image} alt='recipe' />
-                    <p>{this.props.label}</p>
-                    <p>Calories: {(Math.floor(this.props.calories) / this.props.yield)}</p>
+                    <p className="recipe-card-title">{this.props.label}</p>
+                    <p>Calories: {(Math.floor((this.props.calories) / this.props.yield))}</p>
 
 
                     <button className="remove-button" onClick={(event) => {

@@ -4,6 +4,7 @@ import { withAuth } from '../providers/AuthProvider'
 import RecipeCard from '../components/RecipeCard'
 import { Link } from 'react-router-dom'
 
+
 class SavedRecipes extends Component {
 
   constructor(props) {
@@ -43,14 +44,16 @@ class SavedRecipes extends Component {
     const { favourites } = this.state
 
     return (
-      <div>
-        {favourites.map((favourite) => {
+      <div className="saved-recipes">
+
+        <h1>Saved Recipes</h1>
+        {favourites.map((favourite, i) => {
           return <Link to={{
             pathname: '/displayrecipedetail',
             state: {
               recipe: favourite
             }
-          }}>
+          }} key={i}>
 
 
             <RecipeCard className="recipe-card"

@@ -4,7 +4,7 @@ import { withAuth } from '../providers/AuthProvider';
 class Navbar extends Component {
 
   renderIsLoggedIn = () => {
-    return <div>
+    return <div className="loggedin-navbar">
       <p>username: {this.props.user.username}</p>
       <p onClick={this.props.logout}>Logout</p>
     </div>

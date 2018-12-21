@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom'
 
-
 import Navbar from './components/Navbar';
 import PrivateRoute from './components/PrivateRoute';
 import AnonRoute from './components/AnonRoute';
@@ -15,8 +14,6 @@ import Home from './pages/Home';
 import DisplayRecipeDetail from './pages/DisplayRecipeDetail'
 import SavedRecipes from './pages/SavedRecipes'
 import LandingPage from './pages/LandingPage'
-
-import chopchoplogo from './chopchoplogo.png'
 
 import AuthProvider from './providers/AuthProvider';
 

@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import RecipeListItem from '../components/RecipeListItem'
-// import DisplayRecipeDetail from '../components/DisplayRecipeDetail'
-// import EdamamService from '../lib/EdamamService'
-import RecipeCard from '../components/RecipeCard'
 
 class RecipeList extends Component {
 

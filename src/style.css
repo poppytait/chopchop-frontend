@@ -6,7 +6,7 @@ font-family: 'Muli', sans-serif; */
 
 html {
     box-sizing: border-box;
-    height: 100%;
+    
   }
 
   *, *:before, *:after {
@@ -16,9 +16,20 @@ html {
   body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(#9cdaeca2, #b4f7c8);
+    /* background: linear-gradient(#58c8eba2, #b4f7c8);
+    background-repeat: no-repeat; */
+  }
+
+  #root {
+    margin: 0;
+    padding: 0;
+    background: -webkit-linear-gradient(#58c8eba2, #b4f7c8);
+    background: linear-gradient(#58c8eba2, #b4f7c8);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100vh;
+    /* height: 100%; */
+    overflow: -webkit-paged-x;
+    min-height: 100vh;
   }
   
   
@@ -43,17 +54,23 @@ html {
   
   p {
     margin: 0;
+    
   }
 
   ul {
     list-style: none;
     padding: 0;
+    margin-left: -40px;
+  }
+
+  .recipe-card-title {
+    font-weight: bold;
   }
   
   
   
   /* ---- layout ---- */
-  
+ 
   #site-header {
     padding: 30px 0;
     color: white;
@@ -117,6 +134,25 @@ html {
     background: #3CDBD3;
   }
 
+  .private-button {
+    text-decoration: none;
+    display: block;
+    position: relative;
+    float: left;
+    width: 150px;
+    padding: 0;
+    margin: 10px 20px 10px 0;
+    font-weight: 400;
+    text-align: center;
+    line-height: 55px;
+    color: #fff;
+    border-radius: 30px;
+    transition: all 0.2s ;
+    background: #3CDBD3;
+    font-size: 15px;
+    margin-left: 17px;
+  }
+
   /* --- SearchBar --- */
 
   .search-bar {
@@ -136,7 +172,7 @@ html {
     border: 1px solid rgb(160, 160, 160);
     padding: .6rem 2rem .6rem 1rem;
     width: 12rem;
-    font-family: 'roboto';
+    font-family: 'Muli', sans-serif;
     transition: .5s;
   }
     .input:focus {
@@ -151,8 +187,9 @@ div.recipe-card {
   margin: 2.2rem 2rem 2rem 2rem;
   padding: 2rem 2.2rem 1.4rem 1.6rem;
   border-radius: .7rem;
-  background-color: #f1f1f1;
+  background-color: #fdfdfd;
   box-shadow: 2px 4px 16px rgba(86, 79, 78, 0.3);
+  min-height: 150px;
 }
 
 div.recipe-card img {
@@ -177,7 +214,7 @@ div.recipe-card h5 {
 div.recipe-card p {
   padding: .4rem 0 0 0;
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
  
 /* --- RecipeCard component --- */ 
@@ -201,10 +238,9 @@ footer {
   bottom: 0;
   width: 100%;
   height: 60px;
-  border-top: 2px solid grey;
   display: flex;
   justify-content: space-around;
-  background-color: #D1F5FF;
+  background-color: #fdfdfd;
   padding-top: 2%;
 }
 
@@ -294,3 +330,84 @@ h1 {
   font-size: 10px;
   right: 20px;
 }
+
+.private {
+  left: 44%;
+  margin-left: 26%;
+  margin-top: 100px;
+}
+
+.loggedin-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 35px;
+  /* border-bottom: 2px solid grey; */
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+  padding-top: 2%;
+  font-weight: 400;
+  /* background-color: #58c8eba2; */
+
+}
+
+/* --- Pages --- */
+
+.saved-recipes {
+  height: 100%;
+  padding-bottom: 80px;
+}
+
+.saved-recipes h1 {
+  margin-left: 20%;
+  padding-top: 8%;
+}
+
+.search-recipe {
+  padding-left: 50px;
+  padding-top: 40px;
+  height: 100vh;
+  background-size: 100% 100%;
+}
+
+.search-recipe h1 {
+  margin-left: 10%
+}
+
+.home-container{
+  height: 100vh;
+  background: linear-gradient(#58c8eba2, #b4f7c8);
+    background-repeat: no-repeat;
+}
+
+.searchbar {
+  padding-bottom: 80px;
+  margin-left: 10%;
+}
+
+.button-fav {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  float: left;
+  width: 150px;
+  padding: 0;
+  margin: 10px 20px 10px 0;
+  font-weight: 400;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  border-radius: 30px;
+  transition: all 0.2s ;
+  background: #3CDBD3;
+  font-size: 15px;
+}
+
+.displayrecipedetail {
+  margin-left: 10%;
+  padding-top: 10%;
+}
+
+
+

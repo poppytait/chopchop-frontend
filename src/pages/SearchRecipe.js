@@ -5,10 +5,10 @@ import SearchBar from '../components/SearchBar'
 class SearchRecipe extends Component {
     render() {
         return (
-            <div>
+            <div className="search-recipe">
                 <h1>Search Recipe</h1>
                 <SearchBar />
-                
+
             </div>
         );
     }

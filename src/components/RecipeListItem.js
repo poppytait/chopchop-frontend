@@ -14,7 +14,7 @@ class RecipeListItem extends Component {
                         recipe: this.props.item.recipe,
                     }
                 }}>
-                    <img src={this.props.item.recipe.image} />
+                    <img src={this.props.item.recipe.image} alt="this recipe" />
                     {this.props.item.recipe.label}</Link>
 
             </div>
