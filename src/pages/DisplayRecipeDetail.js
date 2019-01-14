@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import FavouritesService from '../lib/FavouritesService';
 
-
 class DisplayRecipeDetail extends Component {
 
     state = {
@@ -46,16 +45,12 @@ class DisplayRecipeDetail extends Component {
 
         return (
             <div className="displayrecipedetail">
-                <h1>Recipe Detail</h1>
-                <p><strong>{recipe.label}</strong></p>
+                <h1>{recipe.label}</h1>
                 <p>{ingredients}</p>
                 <p>Protein: {Math.floor(recipe.totalNutrients.PROCNT.quantity)}g</p>
 
                 <button onClick={this.handleSubmit} className="button-fav" type="submit">
                     {this.state.title}</button>
-
-
-
             </div>
         );
     }
