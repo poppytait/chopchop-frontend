@@ -45,13 +45,15 @@ class DisplayRecipeDetail extends Component {
 
         return (
             <div className="displayrecipedetail">
-                <h1>{recipe.label}</h1>
-                <p>{ingredients}</p>
-                <p>Protein: {Math.floor(recipe.totalNutrients.PROCNT.quantity)}g</p>
-                <p><a href={recipe.url}>Source</a></p>
+                <div className="recipe-card">
+                    <h1>{recipe.label}</h1>
+                    <p>{ingredients}</p>
+                    <p>Protein: {Math.floor(recipe.totalNutrients.PROCNT.quantity)}g</p>
+                    <p><a href={recipe.url}>Source</a></p>
 
-                <button onClick={this.handleSubmit} className="button-fav" type="submit">
-                    {this.state.title}</button>
+                    <button onClick={this.handleSubmit} className="button-fav" type="submit">
+                        {this.state.title}</button>
+                </div>
             </div>
         );
     }
