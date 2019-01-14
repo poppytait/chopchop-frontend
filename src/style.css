@@ -403,7 +403,12 @@ background: #3CDBD3;
 font-size: 15px;
 }
 
+
 .displayrecipedetail {
 margin-left: 10%;
 padding-top: 10%;
+}
+
+.displayrecipedetail a {
+  text-decoration: underline;
 }
