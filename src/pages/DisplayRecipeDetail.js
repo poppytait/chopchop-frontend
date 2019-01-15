@@ -49,7 +49,7 @@ class DisplayRecipeDetail extends Component {
                     <h1>{recipe.label}</h1>
                     <p>{ingredients}</p>
                     <p>Protein: {Math.floor(recipe.totalNutrients.PROCNT.quantity)}g</p>
-                    <p><a href={recipe.url}>Source</a></p>
+                    <p><a href={recipe.url} target="_blank">Source</a></p>
 
                     <button onClick={this.handleSubmit} className="button-fav" type="submit">
                         {this.state.title}</button>
